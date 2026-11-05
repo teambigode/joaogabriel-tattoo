@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050706">
+<title>Consultoria: Team Bigode</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap">
+<style>
+:root{--bg:#040605;--card:#0a0f0c;--line:#16301f;--g:#19d476;--g2:#0a8f4d;--text:#f3f5f4;--mut:#8f9b95;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px)}
+body{background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,Arial,sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:0;background:radial-gradient(700px 420px at 50% -80px,#0e3a22 0%,transparent 70%),linear-gradient(115deg,transparent 46%,#19d47614 46.2%,transparent 46.6%),linear-gradient(115deg,transparent 80%,#19d4761f 80.2%,transparent 80.5%)}
+main{position:relative;z-index:1;max-width:480px;margin:0 auto;padding:34px 20px calc(110px + env(safe-area-inset-bottom,0px))}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}
+.rv.in{opacity:1;transform:none}
+.hero{text-align:center}
+.mark{width:170px;margin:0 auto;display:block;filter:drop-shadow(0 8px 24px #19d47633);animation:fl 5s ease-in-out infinite}
+@keyframes fl{50%{transform:translateY(-5px)}}
+.eyebrow{display:flex;align-items:center;gap:12px;justify-content:center;margin-top:4px;font-size:12px;letter-spacing:.7em;font-weight:600;color:#cfd6d2;padding-left:.7em}
+.eyebrow:before,.eyebrow:after{content:"";height:1px;width:34px;background:linear-gradient(90deg,transparent,var(--g))}
+.eyebrow:after{transform:scaleX(-1)}
+h1{font-size:clamp(50px,16vw,68px);font-weight:900;line-height:.95;letter-spacing:1px;background:linear-gradient(180deg,#fff 20%,#7d8883 100%);-webkit-background-clip:text;background-clip:text;color:transparent;margin-top:6px}
+.perf{color:var(--g);letter-spacing:.7em;padding-left:.7em;font-size:12px;font-weight:800;margin-top:8px}
+.pill{display:inline-block;margin-top:30px;font-size:10px;letter-spacing:.35em;color:var(--g);border:1px solid var(--line);background:#0b1a11;padding:8px 16px;border-radius:30px}
+h2.big{font-size:clamp(30px,9.5vw,40px);font-weight:900;line-height:1.05;margin-top:18px}
+h2.big span{background:linear-gradient(90deg,var(--g),#7dffbd);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{color:var(--mut);font-weight:300;font-size:15px;line-height:1.6;margin:14px auto 26px;max-width:340px}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;text-decoration:none;font-weight:800;letter-spacing:.14em;font-size:13px;padding:17px 22px;border-radius:14px;background:linear-gradient(135deg,var(--g),var(--g2));color:#02150a;box-shadow:0 10px 30px #19d47633,inset 0 1px 0 #ffffff55;transition:transform .15s,box-shadow .2s;position:relative;overflow:hidden}
+.btn:active{transform:scale(.97)}
+.btn:after{content:"";position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,#ffffff55,transparent);transform:skewX(-20deg);animation:sh 3.6s infinite}
+@keyframes sh{60%,100%{left:130%}}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:34px;border:1px solid var(--line);border-radius:16px;background:#080d0a}
+.stats div{padding:16px 6px;text-align:center;font-size:10px;letter-spacing:.18em;color:var(--mut);font-weight:600}
+.stats div+div{border-left:1px solid var(--line)}
+.stats b{display:block;color:var(--text);font-size:13px;letter-spacing:.12em;margin-top:8px}
+.ico{width:26px;height:26px;stroke:var(--g);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;display:block;margin:0 auto}
+.sec{margin-top:62px;text-align:center}
+.sec .k{font-size:10px;letter-spacing:.5em;color:var(--g);font-weight:800;padding-left:.5em}
+.sec h3{font-size:26px;font-weight:900;margin-top:10px;line-height:1.15}
+.sec p.s{color:var(--mut);font-size:14px;font-weight:300;margin-top:8px}
+.steps{margin-top:24px;text-align:left;display:grid;gap:12px}
+.step{display:flex;gap:16px;align-items:center;padding:18px;border-radius:16px;background:linear-gradient(160deg,#0d1510,#080c0a);border:1px solid var(--line)}
+.step .n{font-size:30px;font-weight:900;color:transparent;-webkit-text-stroke:1px var(--g);min-width:44px}
+.step b{display:block;font-size:14px;letter-spacing:.06em}
+.step span{color:var(--mut);font-size:13px;font-weight:300;line-height:1.5}
+.plans{display:grid;gap:18px;margin-top:28px}
+.plan{position:relative;display:block;text-decoration:none;color:inherit;text-align:center;padding:26px 20px 22px;border-radius:20px;background:linear-gradient(160deg,#0e1712,#070a08);border:1px solid var(--line);transition:transform .2s,border-color .2s}
+.plan:active{transform:scale(.98)}
+.plan.best{border:1px solid transparent;background:linear-gradient(#0b140f,#070a08) padding-box,linear-gradient(140deg,#7dffbd,var(--g2) 45%,#19d47633) border-box;box-shadow:0 0 50px #19d47626}
+.tag{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:linear-gradient(135deg,var(--g),var(--g2));color:#02150a;font-size:10px;font-weight:900;letter-spacing:.2em;padding:6px 14px;border-radius:8px;white-space:nowrap}
+.pn{font-size:13px;letter-spacing:.5em;font-weight:600;padding-left:.5em}
+.old{color:var(--mut);text-decoration:line-through;font-size:14px;margin-top:12px}
+.pr{font-size:58px;font-weight:900;line-height:1;margin-top:6px;display:flex;justify-content:center;align-items:flex-start;gap:6px;background:linear-gradient(#fff,#9aa5a0);-webkit-background-clip:text;background-clip:text;color:transparent}
+.pr small{font-size:20px;color:var(--g);-webkit-text-fill-color:var(--g);margin-top:10px}
+.pm{margin:10px auto 0;display:inline-block;font-size:12px;color:#cfd6d2;letter-spacing:.06em}
+.pm b{color:var(--g)}
+.off{display:inline-block;margin-top:12px;border:1px solid var(--g);color:var(--g);border-radius:8px;font-size:11px;font-weight:800;letter-spacing:.16em;padding:6px 14px}
+.plan ul{list-style:none;margin:18px 0 20px;display:grid;gap:8px;text-align:left;padding:16px 4px 0;border-top:1px solid var(--line)}
+.plan li{font-size:13px;color:#cfd6d2;display:flex;gap:10px;align-items:center}
+.plan li:before{content:"";width:16px;height:16px;flex:none;border-radius:50%;background:#19d47622 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4.5 8.2l2.4 2.4 4.6-5' fill='none' stroke='%2319d476' stroke-width='1.8' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E")}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:24px}
+.feat div{padding:20px 10px;border-radius:16px;border:1px solid var(--line);background:#080d0a;font-size:11px;letter-spacing:.16em;font-weight:600;line-height:1.5}
+.feat .ico{margin-bottom:10px}
+.final{margin-top:62px;text-align:center;padding:34px 22px;border-radius:22px;border:1px solid var(--line);background:radial-gradient(300px 200px at 50% 0,#0f3a22,transparent 80%),#070b09}
+.final h3{font-size:24px;font-weight:900;line-height:1.15}
+.final p{color:var(--mut);font-size:14px;font-weight:300;margin:10px 0 22px}
+footer{margin-top:40px;text-align:center;color:#56625c;font-size:10px;letter-spacing:.35em;line-height:2}
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:5;padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px));background:linear-gradient(transparent,#040605 45%)}
+.bar .btn{max-width:448px;margin:0 auto;padding:15px 20px}
+</style>
+</head>
+<body>
+<main>
+<section class="hero rv">
+<svg class="mark" viewBox="0 0 200 64" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#7d8883"/></linearGradient></defs><path fill="url(#g)" d="M100 22C88 8 62 6 38 20 22 30 8 28 1 18c1 24 25 42 50 33 19-7 33-17 49-29zM100 22c12-14 38-16 62-2 16 10 30 12 37-2-1 24-25 42-50 33-19-7-33-17-49-29z"/></svg>
+<div class="eyebrow">TEAM</div>
+<h1>BIGODE</h1>
+<div class="perf">PERFORMANCE</div>
+<span class="pill">CONSULTORIA ONLINE</span>
+<h2 class="big">SEU OBJETIVO,<br><span>NOSSO PLANO.</span></h2>
+<p class="lead">Treino, dieta e acompanhamento completo para você alcançar o seu melhor.</p>
+<a class="btn" href="#planos">VER PLANOS</a>
+<div class="stats">
+<div><svg class="ico" viewBox="0 0 24 24"><path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/></svg><b>DISCIPLINA</b></div>
+<div><svg class="ico" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8M15 7h6v6"/></svg><b>EVOLUÇÃO</b></div>
+<div><svg class="ico" viewBox="0 0 24 24"><path d="M8 21h8M12 17v4M7 4h10v5a5 5 0 01-10 0zM7 6H4v2a3 3 0 003 3M17 6h3v2a3 3 0 01-3 3"/></svg><b>RESULTADOS</b></div>
+</div>
+</section>
+
+<section class="sec rv">
+<div class="k">COMO FUNCIONA</div>
+<h3>Simples, direto e<br>100% personalizado</h3>
+<div class="steps">
+<div class="step"><div class="n">01</div><div><b>ESCOLHA SEU PLANO</b><span>Toque no plano ideal para o seu momento.</span></div></div>
+<div class="step"><div class="n">02</div><div><b>CHAME NO WHATSAPP</b><span>Uma mensagem já pronta abre direto na conversa comigo.</span></div></div>
+<div class="step"><div class="n">03</div><div><b>RECEBA SEU PLANO</b><span>Treino e dieta feitos para o seu objetivo, com acompanhamento.</span></div></div>
+</div>
+</section>
+
+<section class="sec rv" id="planos">
+<div class="k">INVESTIMENTO</div>
+<h3>Escolha seu plano</h3>
+<p class="s">Quanto maior o plano, menor o valor por mês.</p>
+<div class="plans" id="plans"></div>
+</section>
+
+<section class="sec rv">
+<div class="k">INCLUSO EM TODOS OS PLANOS</div>
+<div class="feat">
+<div><svg class="ico" viewBox="0 0 24 24"><path d="M6 8v8M18 8v8M3 10v4M21 10v4M6 12h12"/></svg>TREINO PERSONALIZADO</div>
+<div><svg class="ico" viewBox="0 0 24 24"><path d="M7 3v7a2 2 0 004 0V3M9 10v11M17 3c-2 2-3 5-3 8h3v10"/></svg>PLANO ALIMENTAR</div>
+<div><svg class="ico" viewBox="0 0 24 24"><path d="M21 12a8 8 0 01-11.8 7L4 20l1.1-4.6A8 8 0 1121 12z"/></svg>ACOMPANHAMENTO VIA WHATSAPP</div>
+<div><svg class="ico" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M10 9.5v5l4.5-2.5z"/></svg>VÍDEOS DO TREINO</div>
+</div>
+</section>
+
+<section class="final rv">
+<h3>Pronto para<br>começar sua evolução?</h3>
+<p>Fale comigo agora e garanta seu plano.</p>
+<a class="btn wa" data-plan="">FALE COMIGO NO WHATSAPP</a>
+</section>
+<footer>TEAM BIGODE PERFORMANCE<br>DISCIPLINA · EVOLUÇÃO · RESULTADOS</footer>
+</main>
+
+<div class="bar"><a class="btn wa" data-plan="">CHAMAR NO WHATSAPP</a></div>
+
+<script>
+var NUM="5551998606050";
+var P=[
+{n:"MENSAL",pr:"180",label:"Mensal",val:"R$ 180,00",mes:"R$ 180/mês",li:["Acompanhamento completo","Treino + dieta personalizados"]},
+{n:"TRIMESTRAL",old:"R$ 540",pr:"480",label:"Trimestral",val:"R$ 480,00 (equivale a R$ 160/mês)",mes:"R$ 160/mês",off:"DESCONTO DE 11%",best:1,li:["3 meses de acompanhamento","Treino + dieta personalizados","Economia de R$ 60"]},
+{n:"SEMESTRAL",old:"R$ 1.080",pr:"810",label:"Semestral",val:"R$ 810,00 (equivale a R$ 135/mês)",mes:"R$ 135/mês",off:"DESCONTO DE 25%",li:["6 meses de acompanhamento","Treino + dieta personalizados","Economia de R$ 270"]}
+];
+function msg(p){
+ var a="Olá! 👋\nVim pelo seu Instagram e tenho interesse na consultoria online da *Team Bigode Performance*.\n\n";
+ if(p){a+="📌 *Plano de interesse:* "+p.label+"\n💰 *Valor:* "+p.val+"\n\n";}
+ a+="Para agilizar meu atendimento, já deixo algumas informações:\n\n• *Nome:* \n• *Idade:* \n• *Objetivo* (emagrecer, ganhar massa, definição...): \n• *Treino* em academia ou em casa? \n• *Dias disponíveis* por semana: \n• *Possui alguma lesão ou restrição alimentar?* \n\nAguardo seu retorno para alinharmos os próximos passos. Obrigado! 💪";
+ return a;
+}
+function link(p){return "https://wa.me/"+NUM+"?text="+encodeURIComponent(msg(p));}
+var h="";
+P.forEach(function(p,i){
+ h+='<a class="plan'+(p.best?' best':'')+'" data-i="'+i+'">'+(p.best?'<div class="tag">MAIS ECONÔMICO</div>':'')+
+ '<div class="pn">'+p.n+'</div>'+(p.old?'<div class="old">'+p.old+'</div>':'')+
+ '<div class="pr"><small>R$</small>'+p.pr+'</div><div class="pm">equivale a <b>'+p.mes+'</b></div>'+
+ (p.off?'<div><span class="off">'+p.off+'</span></div>':'')+
+ '<ul>'+p.li.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul><span class="btn">QUERO O PLANO '+p.n+'</span></a>';
+});
+document.getElementById("plans").innerHTML=h;
+document.querySelectorAll(".plan").forEach(function(a){a.href=link(P[a.dataset.i]);a.target="_blank";a.rel="noopener"});
+document.querySelectorAll(".wa").forEach(function(a){a.href=link(null);a.target="_blank";a.rel="noopener"});
+var els=document.querySelectorAll(".rv");
+if("IntersectionObserver" in window){
+ var io=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");io.unobserve(x.target)}})},{threshold:.1});
+ els.forEach(function(e){io.observe(e)});
+}else{els.forEach(function(e){e.classList.add("in")})}
+</script>
+</body>
+</html>
